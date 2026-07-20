@@ -1,20 +1,18 @@
-import {
-  FaHardHat,
-  FaRulerCombined,
-  FaUsers,
-  FaMoneyBillWave,
-  FaRoad,
-} from 'react-icons/fa'
 import type { Project } from '../data/portfolio'
 import { Panel } from './Panel'
-
-const statIcons = [FaRulerCombined, FaMoneyBillWave, FaUsers, FaRoad, FaHardHat]
 
 type Props = {
   project: Project
 }
 
 export function ProjectCard({ project }: Props) {
+  const meta = [
+    project.employer && { label: 'EMPLOYER', value: project.employer },
+    project.client && { label: 'CLIENT', value: project.client },
+    project.duration && { label: 'DURATION', value: project.duration },
+    { label: 'ROLE', value: project.role },
+  ].filter(Boolean) as { label: string; value: string }[]
+
   return (
     <Panel number={project.number} className="project-card" dark>
       <div className="project-card__media">
@@ -25,31 +23,20 @@ export function ProjectCard({ project }: Props) {
         </div>
       </div>
       <dl className="project-card__meta">
-        <div>
-          <dt>CLIENT</dt>
-          <dd>{project.client}</dd>
-        </div>
-        <div>
-          <dt>DURATION</dt>
-          <dd>{project.duration}</dd>
-        </div>
-        <div>
-          <dt>ROLE</dt>
-          <dd>{project.role}</dd>
-        </div>
+        {meta.map((item) => (
+          <div key={item.label}>
+            <dt>{item.label}</dt>
+            <dd>{item.value}</dd>
+          </div>
+        ))}
       </dl>
-      <div className="project-card__stats">
-        {project.stats.map((stat, i) => {
-          const Icon = statIcons[i % statIcons.length]
-          return (
-            <div className="project-card__stat" key={stat.label}>
-              <Icon className="project-card__stat-icon" />
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </div>
-          )
-        })}
-      </div>
+      {project.scope && project.scope.length > 0 && (
+        <ul className="project-card__scope">
+          {project.scope.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      )}
     </Panel>
   )
 }

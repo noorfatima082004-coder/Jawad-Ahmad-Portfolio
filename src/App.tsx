@@ -4,6 +4,7 @@ import { About } from './components/About'
 import { Timeline } from './components/Timeline'
 import { Competencies } from './components/Competencies'
 import { ProjectCard } from './components/ProjectCard'
+import { SportsComplexDetails } from './components/SportsComplexDetails'
 import { ChiniotDetails } from './components/ChiniotDetails'
 import { AbdullahpurDetails } from './components/AbdullahpurDetails'
 import { TechnicalSkills } from './components/TechnicalSkills'
@@ -14,7 +15,7 @@ import { projects } from './data/portfolio'
 
 function App() {
   const [activeTab, setActiveTab] = useState<TabId>('home')
-  const [chiniot, abdullahpur] = projects
+  const [sportsComplex, chiniot, abdullahpur] = projects
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -38,6 +39,8 @@ function App() {
 
         {activeTab === 'projects' && (
           <>
+            <ProjectCard project={sportsComplex} />
+            <SportsComplexDetails />
             <ProjectCard project={chiniot} />
             <ChiniotDetails />
             <ProjectCard project={abdullahpur} />

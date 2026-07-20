@@ -1,30 +1,12 @@
-import {
-  FaHardHat,
-  FaDraftingCompass,
-  FaLaptop,
-  FaClipboardCheck,
-  FaRulerCombined,
-  FaShieldAlt,
-  FaCogs,
-  FaMapMarkedAlt,
-} from 'react-icons/fa'
+import { FaDraftingCompass, FaLaptop, FaRulerCombined } from 'react-icons/fa'
 import { Panel } from './Panel'
 import { images, technicalSkills } from '../data/portfolio'
 
-const icons = [
-  FaCogs,
-  FaMapMarkedAlt,
-  FaDraftingCompass,
-  FaLaptop,
-  FaRulerCombined,
-  FaClipboardCheck,
-  FaHardHat,
-  FaShieldAlt,
-]
+const icons = [FaDraftingCompass, FaLaptop, FaRulerCombined]
 
 export function TechnicalSkills() {
   return (
-    <Panel number="14" title="TECHNICAL SKILLS">
+    <Panel number="11" title="ADDITIONAL SKILLS">
       <div className="panel__body">
         <div className="skills-layout">
           <img
@@ -39,7 +21,9 @@ export function TechnicalSkills() {
                 <div className="skill-row" key={skill.name}>
                   <Icon className="skill-row__icon" />
                   <span className="skill-row__name">{skill.name}</span>
-                  <span className="skill-row__level">{skill.level}</span>
+                  {skill.level && (
+                    <span className="skill-row__level">{skill.level}</span>
+                  )}
                 </div>
               )
             })}

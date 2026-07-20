@@ -36,7 +36,7 @@ export function Competencies() {
       <div className="panel__body">
         <div className="comp-grid">
           {competencies.map((label, i) => {
-            const Icon = icons[i]
+            const Icon = icons[i % icons.length]
             return (
               <div className="comp-item" key={label}>
                 <Icon className="comp-item__icon" />

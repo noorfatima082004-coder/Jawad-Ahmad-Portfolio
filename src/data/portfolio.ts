@@ -2,13 +2,19 @@ export const images = {
   cover:
     'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
   portrait: '/images/jawad-portrait.png?v=2',
-  chiniot: [
-    '/images/projects/chiniot/fda1.png',
-    '/images/projects/chiniot/fda2.png',
-    '/images/projects/chiniot/fda3.png',
-    '/images/projects/chiniot/fda4.png',
-    '/images/projects/chiniot/fda5.png',
-    '/images/projects/chiniot/fda6.png',
+  sportsComplex: [
+    '/images/projects/sports-complex/fda1.png',
+    '/images/projects/sports-complex/fda2.png',
+    '/images/projects/sports-complex/fda3.png',
+    '/images/projects/sports-complex/fda4.png',
+    '/images/projects/sports-complex/fda5.png',
+    '/images/projects/sports-complex/fda6.png',
+  ],
+  chiniotWelfare: [
+    '/images/projects/chiniot-welfare/chinniot1.png',
+    '/images/projects/chiniot-welfare/chinniot2.png',
+    '/images/projects/chiniot-welfare/chinniot3.png',
+    '/images/projects/chiniot-welfare/chinniot4.png',
   ],
   abdullahpur: [
     '/images/projects/abdullahpur/abdfly1.png',
@@ -19,71 +25,62 @@ export const images = {
     'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80',
   hardhat:
     'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
-  cert1:
-    'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80',
-  cert2:
-    'https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80',
 }
 
-export const aboutStats = [
-  { value: '20+', label: 'Years Experience' },
-  { value: '150+', label: 'Projects Completed' },
-  { value: '15+', label: 'Cities Worked' },
-  { value: '50+', label: 'Major Clients' },
-]
+// Verbatim from CV "Career Overview" section
+export const careerOverview =
+  'Seeking challenging assignments in the Civil Engineering Construction Industry with an organization of repute, and to utilize hands-on site experience for the successful completion of assigned projects.'
 
+// From CV "Additional Skills" section
 export const coreExpertise = [
-  'Site Supervision & Execution',
-  'Project Planning & Scheduling',
-  'QA/QC & Material Testing',
-  'Quantity Surveying & BOQ',
-  'Road & Infrastructure Works',
-  'Concrete & Structural Works',
-  'Client & Consultant Coordination',
-  'HSE Compliance & Safety',
+  'Site Supervision & Inspection',
+  'Quality Control & Concrete Testing',
+  'Road Testing & Compaction Works',
+  'Reinforcement & Formwork Checks',
+  'Utilities Installation Supervision',
+  'Contractor & Safety Monitoring',
+  'Daily Progress Reporting',
+  'AutoCAD (Basic) & MS Office',
 ]
 
+// From CV "Major Projects" — most recent first
 export const timeline = [
   {
-    years: '2018 – Present',
-    title: 'Senior Site Engineer',
-    company: 'Chiniot Welfare Complex & Public Projects — Chiniot',
-  },
-  {
-    years: '2014 – 2018',
-    title: 'Project Engineer',
-    company: 'Abdullahpur Flyover & Infrastructure — Multiple Cities',
-  },
-  {
-    years: '2010 – 2014',
+    years: 'March 2021 – Present',
     title: 'Site Engineer',
-    company: 'Institutional & Civic Projects — Faisalabad',
+    company: 'Alam Khan Brothers (Engineering & Construction Pvt. Ltd.)',
   },
   {
-    years: '2006 – 2010',
-    title: 'Assistant Site Engineer',
-    company: 'Roads, Landscaping & Infrastructure — Multiple Cities',
+    years: '16 Nov 2016 – March 2021',
+    title: 'Client Engineer',
+    company: 'Chiniot Welfare Complex, Jhang Road, Chiniot',
   },
   {
-    years: '2003 – 2006',
-    title: 'Junior Site Engineer',
-    company: 'Residential & Commercial Construction — Punjab',
+    years: '5 Feb 2015 – 15 Nov 2016',
+    title: 'Site Engineer',
+    company: 'Alam Khan Brothers (Engineering & Construction Pvt. Ltd.)',
+  },
+  {
+    years: '28 March 2014 – February 2015',
+    title: 'Trainee Engineer',
+    company: 'Rasco Builders & Developers',
   },
 ]
 
+// Grounded directly in the "Key Responsibilities" bullets across all four CV roles
 export const competencies = [
   'Site Supervision',
-  'Project Management',
-  'QA / QC',
-  'Road Works',
-  'Concrete Works',
-  'Steel Works',
-  'Quantity Survey',
-  'AutoCAD',
-  'Surveying',
-  'HSE / Safety',
-  'Client Relations',
-  'Documentation',
+  'Material Verification & Delivery',
+  'Concrete Testing (Slump/Temp/Lab)',
+  'Road Testing & Compaction',
+  'Embankment & Stone Pitching',
+  'Reinforcement & Formwork Inspection',
+  'Sewerage & Water Supply Works',
+  'Electrical Duct Installation',
+  'Contractor & Safety Monitoring',
+  'Daily Progress Reporting',
+  'Client & Management Coordination',
+  'AutoCAD & MS Office',
 ]
 
 export type Project = {
@@ -91,73 +88,65 @@ export type Project = {
   number: string
   name: string
   image: string
-  client: string
-  duration: string
+  employer?: string
+  client?: string
+  duration?: string
   role: string
-  stats: { label: string; value: string }[]
+  scope?: string[]
 }
 
 export const projects: Project[] = [
   {
+    id: 'sports-complex',
+    number: '05',
+    name: 'FDA SPORTS COMPLEX, FAISALABAD & LDA SPORTS COMPLEX, LAHORE',
+    image: images.sportsComplex[0],
+    employer: 'Alam Khan Brothers (Engineering & Construction Pvt. Ltd.)',
+    duration: 'March 2021 – Present',
+    role: 'Site Engineer',
+    scope: [
+      'FDA Sports Complex – Faisalabad',
+      'LDA Sports Complex – Shahdara, Lahore',
+    ],
+  },
+  {
     id: 'chiniot',
-    number: '01',
+    number: '07',
     name: 'CHINIOT WELFARE COMPLEX, JHANG ROAD, CHINIOT',
-    image: '/images/projects/chiniot/fda1.png',
-    client: 'Government / Welfare Authority',
-    duration: '2018 – 2020',
-    role: 'Senior Site Engineer',
-    stats: [
-      { label: 'AREA', value: '25 Acres' },
-      { label: 'COST', value: 'PKR 450 Million' },
-      { label: 'TEAM SIZE', value: '45 Members' },
+    image: images.chiniotWelfare[0],
+    duration: '16 November 2016 – March 2021',
+    role: 'Client Engineer',
+    scope: [
+      'LRBT Eye Hospital',
+      'Sadaqat Model School & Rasheeda Aslam Higher Secondary School',
+      'External Works — Roads & Landscaping',
+      'Boundary Wall, Mosque & Guard Room',
     ],
   },
   {
     id: 'abdullahpur',
-    number: '02',
+    number: '09',
     name: 'ABDULLAHPUR FLYOVER',
-    image: '/images/projects/abdullahpur/abdfly1.png',
+    image: images.abdullahpur[0],
     client: 'Government / Infrastructure Authority',
-    duration: '2016 – 2018',
     role: 'Site / Project Engineer',
-    stats: [
-      { label: 'LENGTH', value: 'Multi-Span' },
-      { label: 'COST', value: 'PKR 500+ Million' },
-      { label: 'TEAM SIZE', value: '40+ Members' },
-    ],
   },
 ]
 
+// From CV "Additional Skills" section — only AutoCAD carries a stated level
 export const technicalSkills = [
-  { name: 'Construction Equipment', level: 'EXPERT' },
-  { name: 'Level Instruments / Total Station', level: 'EXPERT' },
-  { name: 'AutoCAD', level: 'EXPERT' },
-  { name: 'MS Office / MS Project', level: 'ADVANCED' },
-  { name: 'Quantity Take-off & BOQ', level: 'EXPERT' },
-  { name: 'Quality Control & Testing', level: 'EXPERT' },
-  { name: 'Site Surveying & Setting Out', level: 'EXPERT' },
-  { name: 'HSE & Safety Management', level: 'ADVANCED' },
+  { name: 'AutoCAD', level: 'Basic' },
+  { name: 'MS Office' },
+  { name: 'All Types of Level Instrument' },
 ]
 
-export const certifications = [
-  'Site Engineering Diploma',
-  'AutoCAD Professional Certification',
-  'Occupational Health & Safety Training',
-  'Concrete Technology Workshop',
-]
-
-export const achievements = [
-  '150+ Successful Projects Delivered',
-  'Zero Major Safety Incidents on Led Sites',
-  'On-time Delivery Across Multi-year Contracts',
-  'Recognized for Quality & Client Satisfaction',
-]
-
-export const memberships = [
-  'Pakistan Engineering Council (PEC)',
-  'Institution of Engineers Pakistan',
-  'Construction Industry Professionals Network',
-]
+// From CV "Qualification" section
+export const qualification = {
+  degree: '3-Year Diploma of Associate Engineering (Civil)',
+  institute: 'Government Technical Training & Trade Centre (GTTTC), Faisalabad',
+  board: 'Punjab Board of Technical Education, Lahore',
+  years: '1994 – 1997',
+}
 
 export const contact = {
   phone: '0300-6627912',

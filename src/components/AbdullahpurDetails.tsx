@@ -3,7 +3,7 @@ import { images } from '../data/portfolio'
 
 export function AbdullahpurDetails() {
   return (
-    <Panel number="09" title="PROJECT DETAILS" className="details details--light">
+    <Panel number="10" title="PROJECT DETAILS" className="details details--light">
       <div className="panel__body">
         <div className="details-light-layout">
           <div className="details__text">
