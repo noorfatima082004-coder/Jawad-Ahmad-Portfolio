@@ -284,15 +284,9 @@ a {
   gap: 12px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
   .app--experience .comp-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 700px) {
-  .app--experience .comp-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
   }
 }

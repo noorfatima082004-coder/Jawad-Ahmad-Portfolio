@@ -75,8 +75,6 @@ export const competencies = [
   'Road Testing & Compaction',
   'Embankment & Stone Pitching',
   'Reinforcement & Formwork Inspection',
-  'Sewerage & Water Supply Works',
-  'Electrical Duct Installation',
   'Contractor & Safety Monitoring',
   'Daily Progress Reporting',
   'Client & Management Coordination',
