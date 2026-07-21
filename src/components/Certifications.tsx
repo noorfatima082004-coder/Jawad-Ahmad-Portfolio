@@ -3,7 +3,7 @@ import { qualification } from '../data/portfolio'
 
 export function Certifications() {
   return (
-    <Panel number="12" title="QUALIFICATION">
+    <Panel number="10" title="QUALIFICATION">
       <div className="panel__body">
         <div className="certs-layout certs-layout--full">
           <div className="certs-block">

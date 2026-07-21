@@ -6,7 +6,7 @@ const icons = [FaDraftingCompass, FaLaptop, FaRulerCombined]
 
 export function TechnicalSkills() {
   return (
-    <Panel number="11" title="ADDITIONAL SKILLS">
+    <Panel number="09" title="ADDITIONAL SKILLS">
       <div className="panel__body">
         <div className="skills-layout skills-layout--full">
           <div className="skills-list">

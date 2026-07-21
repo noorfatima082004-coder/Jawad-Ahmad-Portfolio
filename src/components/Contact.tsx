@@ -4,7 +4,7 @@ import { contact } from '../data/portfolio'
 
 export function Contact() {
   return (
-    <Panel number="13" className="contact" dark>
+    <Panel number="11" className="contact" dark>
       <div className="panel__body contact__inner">
         <h2 className="contact__headline">
           LET&apos;S BUILD THE FUTURE TOGETHER

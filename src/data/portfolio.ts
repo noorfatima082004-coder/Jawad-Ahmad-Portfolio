@@ -16,11 +16,6 @@ export const images = {
     '/images/projects/chiniot-welfare/chinniot3.png',
     '/images/projects/chiniot-welfare/chinniot4.png',
   ],
-  abdullahpur: [
-    '/images/projects/abdullahpur/abdfly1.png',
-    '/images/projects/abdullahpur/abdfly2.png',
-    '/images/projects/abdullahpur/abdfly3.png',
-  ],
   survey:
     'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80',
   hardhat:
@@ -120,14 +115,6 @@ export const projects: Project[] = [
       'External Works — Roads & Landscaping',
       'Boundary Wall, Mosque & Guard Room',
     ],
-  },
-  {
-    id: 'abdullahpur',
-    number: '09',
-    name: 'ABDULLAHPUR FLYOVER',
-    image: images.abdullahpur[0],
-    client: 'Government / Infrastructure Authority',
-    role: 'Site / Project Engineer',
   },
 ]
 
