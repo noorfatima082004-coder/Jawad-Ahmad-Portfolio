@@ -375,24 +375,6 @@ a {
   padding: 5px 0 5px 14px;
 }
 
-.app--qualifications .skills-layout__photo {
-  min-height: 280px;
-}
-
-.app--qualifications .certs-visual {
-  min-height: 320px;
-}
-
-@media (min-width: 900px) {
-  .app--qualifications .skills-layout__photo {
-    min-height: 340px;
-  }
-
-  .app--qualifications .certs-visual {
-    min-height: 380px;
-  }
-}
-
 /* Projects — clean scroll layout */
 .app--projects {
   gap: 28px;
@@ -1222,12 +1204,8 @@ a {
   align-items: stretch;
 }
 
-.skills-layout__photo {
-  width: 100%;
-  height: 100%;
-  min-height: 200px;
-  object-fit: cover;
-  border: 2px solid var(--gold);
+.skills-layout--full {
+  grid-template-columns: 1fr;
 }
 
 .skills-list {
@@ -1276,6 +1254,10 @@ a {
   gap: 12px;
 }
 
+.certs-layout--full {
+  grid-template-columns: 1fr;
+}
+
 .certs-block {
   margin-bottom: 12px;
 }
@@ -1308,13 +1290,6 @@ a {
   background: var(--gold);
 }
 
-.certs-visual {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 220px;
-  border: 1px solid var(--gold-dim);
-}
 
 /* ——— Contact ——— */
 .contact {
@@ -1599,12 +1574,6 @@ a {
     gap: 14px;
   }
 
-  .skills-layout__photo {
-    min-height: 200px;
-    max-height: 260px;
-    width: 100%;
-  }
-
   .skill-row {
     grid-template-columns: 24px 1fr auto;
     padding: 10px;
@@ -1612,10 +1581,6 @@ a {
 
   .skill-row__name {
     font-size: 0.6rem;
-  }
-
-  .certs-visual {
-    min-height: 220px;
   }
 
   .certs-block li {

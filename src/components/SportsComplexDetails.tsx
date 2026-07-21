@@ -43,7 +43,6 @@ export function SportsComplexDetails() {
             <li>Prepared daily progress reports and maintained comprehensive project records.</li>
             <li>Checked site conditions before starting work to ensure readiness.</li>
             <li>Monitored contractor performance to ensure timely and quality completion of work.</li>
-            <li>Supervised installation of services including sewerage systems, water supply lines, and electrical cable ducts.</li>
           </ul>
         </div>
       </div>

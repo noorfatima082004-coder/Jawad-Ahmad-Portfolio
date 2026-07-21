@@ -47,8 +47,8 @@ export const coreExpertise = [
 export const timeline = [
   {
     years: 'March 2021 – Present',
-    title: 'Site Engineer',
-    company: 'Alam Khan Brothers (Engineering & Construction Pvt. Ltd.)',
+    title: 'Civil Engineer',
+    company: 'Self Employed ',
   },
   {
     years: '16 Nov 2016 – March 2021',

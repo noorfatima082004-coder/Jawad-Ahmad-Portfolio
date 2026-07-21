@@ -19,9 +19,7 @@ export function Cover() {
         <p className="cover__role">
           CIVIL SITE ENGINEER &amp; CONSTRUCTION PROFESSIONAL
         </p>
-        <div className="cover__badge">
-          SITE ENGINEER — ALAM KHAN BROTHERS
-        </div>
+        <div className="cover__badge">CIVIL ENGINEER</div>
         <p className="cover__footer">COMMITMENT | QUALITY | INTEGRITY</p>
       </div>
     </Panel>
